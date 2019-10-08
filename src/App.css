@@ -68,6 +68,58 @@ button:active {
   background-color: rgb(235, 199, 0);
 }
 
+.dropdown{
+  /* background-color: red; */
+  height:250px;
+  overflow:hidden;
+  position: fixed;
+  top:55px;
+  left: 0px;
+  display:flex;
+  flex-direction: column;
+  justify-content: left;
+  width: 100vw;
+  
+}
+
+.dropdown-button{
+  background-color: rgb(33, 37, 42);
+  display:flex;
+  font-size: 14px;
+}
+
+.hide-animation{
+  animation-name: hide;
+  animation-duration: .5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+}
+.show-animation{
+  animation-name: show;
+  animation-duration: 0.5s;
+  animation-iteration-count: 1;
+  animation-fill-mode: forwards;
+
+}
+
+@keyframes hide {
+  0%{
+    height: 200px
+  }
+  100%{
+    height:0px;
+  }
+}
+
+@keyframes show {
+  0% {
+    height: 0px;
+  }
+  100%{
+    height: 100%;
+  }
+}
+
 .menu {
   color:white;
   background-color: gold;
@@ -115,6 +167,9 @@ button:active {
 @media (min-width: 991px){
   .menu {
     display: none;
+  }
+  .dropdown-button {
+    display: none;;
   }
 }
 
